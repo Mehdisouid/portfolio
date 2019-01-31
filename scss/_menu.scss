@@ -31,7 +31,8 @@
                 opacity: 0;
             }
 
-            &:nth-child(3) {                transform: rotate(-45deg) translate(7px, -5px);
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -5px);
             }
 
         }
@@ -39,3 +40,5 @@
 
     }
 }
+
+

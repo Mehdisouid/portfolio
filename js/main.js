@@ -17,7 +17,7 @@ function toggleMenu() {
 
         menu_branding.classList.add('show')
         menu_nav.classList.add('show')
-        menu_items.forEach(item => item.classList.add('close'));
+        menu_items.forEach(item => item.classList.add('show'));
         menu_showed = true ;
     } else {
         btn_menu.classList.remove('close')
@@ -25,7 +25,7 @@ function toggleMenu() {
 
         menu_branding.classList.remove('show')
         menu_nav.classList.remove('show')
-        menu_items.forEach(item => item.classList.remove('close'));
+        menu_items.forEach(item => item.classList.remove('show'));
         menu_showed = false ;
 
     }

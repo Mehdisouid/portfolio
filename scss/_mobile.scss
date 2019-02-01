@@ -1,0 +1,31 @@
+@include mediaXl {}
+
+@include mediaLg {}
+
+@include mediaMd {
+    main {
+        align-content: center;
+        text-align: center;
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    .menu-nav,
+    .menu-branding {
+        float: none;
+        width: 100%
+    }
+
+}
+
+@include mediaSm {
+
+    main#home h1 {
+
+        margin-top: 10vh;
+    }
+}

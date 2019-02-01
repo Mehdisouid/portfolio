@@ -23,7 +23,7 @@ $background-opacity:0.8;
                 top: 0;
                 left: 0;
                 right: 0;
-                height: 100%; 
+                height: 100%;
                 width: 100%;
                 background: rgba($primary-color, $background-opacity);
                 z-index: -1;
@@ -34,4 +34,31 @@ $background-opacity:0.8;
 
     }
 
+}
+
+
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content ;
+    }
+}
+
+@mixin mediaMd {
+
+    @media screen and (max-width: 768px) {
+        @content ;
+    }
+}
+
+@mixin mediaLg {
+
+    @media screen and (min-width: 769px)and (max-width: 1170px) {
+        @content ;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content ;
+    }
 }

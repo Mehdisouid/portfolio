@@ -10,7 +10,7 @@
         margin: 0 0 5px 0;
         width: 28px;
         height: 3px;
-        background: white;
+        background: set_text_color($primary-color);
         @include easeOut;
 
 
@@ -62,7 +62,7 @@
         float: left;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+         height: 100vh;
         overflow: hidden;
     }
 
@@ -95,11 +95,11 @@
             }
 
             .nav-link {
-                font-size: 30px;
+                font-size: 2rem;
                 text-transform: uppercase;
                 padding: 1rem 0;
                 font-weight: 300;
-                color: white;
+                color: set_text_color($primary-color);
                 text-decoration: none;
                 @include easeOut;
 

@@ -1,0 +1,272 @@
+.menu-btn {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    margin: 0 0 5px 0;
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -5px); }
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: .9; }
+  .menu.show {
+    visibility: visible; }
+  .menu-nav, .menu-branding {
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #414141;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-nav .nav-item {
+      transform: translate3d(600px, 0, 0);
+      transition: all 0.5s ease-out; }
+      .menu-nav .nav-item.show {
+        transform: translate3d(0, 0, 0); }
+      .menu-nav .nav-item.current > a {
+        color: #eece1a; }
+      .menu-nav .nav-item .nav-link {
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.5s ease-out; }
+        .menu-nav .nav-item .nav-link:hover {
+          color: #eece1a;
+          transition: all 0.5s ease-out; }
+  .menu-branding {
+    background: #444;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-branding .portrait {
+      background-image: url(../images/portrait.jpg);
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      border: 3px solid #eece1a; }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #444;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 6rem; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(73, 73, 73, 0.5); }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 2; }
+
+.text-secondary {
+  color: #eece1a; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px); }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: #eece1a;
+        transition: all 0.5s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+
+.about_infos {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bio-image bio bio' 'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr); }
+
+.bio {
+  grid-area: bio; }
+
+.bio-image {
+  grid-area: bio-image;
+  margin: auto;
+  border-radius: 50%;
+  border: #eece1a 3px solid; }
+
+.job1 {
+  grid-area: job1; }
+
+.job2 {
+  grid-area: job2; }
+
+.job3 {
+  grid-area: job3; }
+
+.job {
+  background: #515151;
+  border-bottom: #eece1a 3px solid;
+  padding: 0.5rem; }
+
+.main-footer {
+  background: #373737;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  height: 60px; }
+
+.works {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem; }
+  .works img {
+    width: 100%;
+    border: #fff 3px solid;
+    transition: all 0.5s ease-out; }
+    .works img:hover {
+      opacity: .5;
+      border: #eece1a 3px solid; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1rem; }
+  .boxes .item {
+    font-size: 2rem;
+    border: 3px solid white;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.5s ease-out; }
+    .boxes .item:hover {
+      background: #eece1a;
+      color: #000;
+      padding: 0.5rem 1rem; }
+      .boxes .item:hover span {
+        color: #000; }
+
+.btn, .btn-light, .btn-dark {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 0; }
+  .btn:hover, .btn-light:hover, .btn-dark:hover {
+    background: #eece1a;
+    color: #000; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #000; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+@media screen and (min-width: 1171px) {
+  .works {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .works {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-content: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(100%, 0, 0); }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(-100%, 0, 0); }
+    .menu-branding .portrait {
+      background-image: url(../images/portrait_small.jpg);
+      height: 150px;
+      width: 150px; }
+  .about_infos {
+    grid-template-areas: 'bio-image' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; }
+  .works {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .works {
+    grid-template-columns: repeat(1, 1fr); } }
